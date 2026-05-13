@@ -9,20 +9,25 @@ struct NodoN {
 };
 
 int contarNodos(NodoN* raiz) {
-    if (raiz == nullptr) {
-        return 0;
-    }
+    // TODO: Implementa tu lógica aquí
 
-    int total = 1;
+    // Caso base: si el nodo no existe, no hay nada que contar
+    if (raiz == nullptr) return 0;
+
+    // Empezamos contando el nodo actual (vale 1)
+    int total = 1; // Contamos el nodo actual
+
+    // Recorremos cada hijo y sumamos su conteo de forma recursiva
     for (NodoN* hijo : raiz->hijos) {
-        total += contarNodos(hijo);
+        total += contarNodos(hijo); // Sumamos recursivamente cada hijo
     }
 
+    // Retornamos el total acumulado de este nodo y todos sus descendientes
     return total;
 }
 
 int main() {
-    // Construimos el Ã¡rbol
+    // Construimos el árbol
     NodoN* n5 = new NodoN(5);
     NodoN* n6 = new NodoN(6);
     NodoN* n2 = new NodoN(2);
