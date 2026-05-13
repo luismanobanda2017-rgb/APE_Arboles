@@ -3,7 +3,13 @@ import java.util.List;
 
 public class  RecorridoInOrder {
     public static void inOrderAux(Nodo nodo, List<Integer> resultado) {
-        // TODO: Implementa tu lógica de recorrido aquí
+        if (nodo == null) {
+            return;
+        }
+
+        inOrderAux(nodo.izquierdo, resultado);
+        resultado.add(nodo.valor);
+        inOrderAux(nodo.derecho, resultado);
     }
 
     public static List<Integer> recorridoInOrder(Nodo raiz) {

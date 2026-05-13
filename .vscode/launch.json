@@ -1,0 +1,59 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "RecorridoInOrder",
+      "request": "launch",
+      "mainClass": "RecorridoInOrder",
+      "projectName": "APE_Arboles_c7a45aec"
+    },
+    {
+      "type": "java",
+      "name": "Ejercicio5_Transformacion",
+      "request": "launch",
+      "mainClass": "Ejercicio5_Transformacion",
+      "projectName": "APE_Arboles_c7a45aec"
+    },
+    {
+      "type": "java",
+      "name": "Ejercicio3_Binario2",
+      "request": "launch",
+      "mainClass": "Ejercicio3_Binario2",
+      "projectName": "APE_Arboles_c7a45aec"
+    },
+    {
+      "type": "java",
+      "name": "Ejercicio2_Binario",
+      "request": "launch",
+      "mainClass": "Ejercicio2_Binario",
+      "projectName": "APE_Arboles_c7a45aec"
+    },
+    {
+      "type": "java",
+      "name": "Ejercicio1_Basico",
+      "request": "launch",
+      "mainClass": "Ejercicio1_Basico",
+      "projectName": "APE_Arboles_c7a45aec"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/alfre/OneDrive/Documentos/GitHub/APE_Arboles/cpp",
+      "program": "c:/Users/alfre/OneDrive/Documentos/GitHub/APE_Arboles/cpp/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

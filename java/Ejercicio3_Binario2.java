@@ -1,7 +1,10 @@
 public class Ejercicio3_Binario2 {
     public static int calcularAltura(Nodo raiz) {
-        // TODO: Implementa tu lógica aquí
-        return 0;
+        if (raiz == null) {
+            return 0;
+        }
+
+        return 1 + Math.max(calcularAltura(raiz.izquierdo), calcularAltura(raiz.derecho));
     }
 
     public static void main(String[] args) {
