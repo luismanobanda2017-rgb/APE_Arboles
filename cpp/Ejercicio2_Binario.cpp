@@ -9,25 +9,28 @@ struct Nodo {
 };
 
 Nodo* insertar(Nodo* raiz, int valor) {
-    if (raiz == nullptr) {
-        return new Nodo(valor);
-    }
+    // TODO: Implementa tu lógica aquí
 
-    if (valor < raiz->valor) {
+    // Caso base: si llegamos a un espacio vacío, creamos el nuevo nodo aquí
+    if (raiz == nullptr) return new Nodo(valor);
+
+    // Si el valor es menor, pertenece al subárbol izquierdo
+    if (valor < raiz->valor)
         raiz->izquierdo = insertar(raiz->izquierdo, valor);
-    } else {
+    else
+        // Si el valor es mayor o igual, pertenece al subárbol derecho
         raiz->derecho = insertar(raiz->derecho, valor);
-    }
 
+    // Retornamos la raíz con el nuevo nodo ya insertado
     return raiz;
 }
 
 int main() {
     Nodo* raiz = new Nodo(10);
     
-    insertar(raiz, 5);
-    insertar(raiz, 15);
-    insertar(raiz, 3);
+    raiz = insertar(raiz, 5);
+    raiz = insertar(raiz, 15);
+    raiz = insertar(raiz, 3);
     
     cout << "--- Prueba Ejercicio 2 ---" << endl;
     cout << "Raiz (Esperado 10): " << raiz->valor << endl;
