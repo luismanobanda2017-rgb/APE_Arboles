@@ -3,13 +3,19 @@ import java.util.List;
 
 public class  RecorridoInOrder {
     public static void inOrderAux(Nodo nodo, List<Integer> resultado) {
-        if (nodo == null) {
-            return;
-        }
+        // TODO: Implementa tu lógica de recorrido aquí
 
-        inOrderAux(nodo.izquierdo, resultado);
-        resultado.add(nodo.valor);
-        inOrderAux(nodo.derecho, resultado);
+        // Caso base: si el nodo no existe, no hay nada que recorrer
+        if (nodo == null) return;
+
+        // Primero recorremos todo el subárbol izquierdo (valores menores)
+        inOrderAux(nodo.izquierdo, resultado); // Recorre izquierda
+
+        // Luego visitamos el nodo actual y guardamos su valor
+        resultado.add(nodo.valor);             // Visita nodo
+
+        // Por último recorremos todo el subárbol derecho (valores mayores)
+        inOrderAux(nodo.derecho, resultado);   // Recorre derecha
     }
 
     public static List<Integer> recorridoInOrder(Nodo raiz) {

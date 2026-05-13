@@ -9,7 +9,7 @@ struct NodoN {
 };
 
 int contarNodos(NodoN* raiz) {
-    // TODO: Implementa tu lógica aquí
+    // TODO: Implementa tu lÃ³gica aquÃ­
 
     // Caso base: si el nodo no existe, no hay nada que contar
     if (raiz == nullptr) return 0;
@@ -27,7 +27,7 @@ int contarNodos(NodoN* raiz) {
 }
 
 int main() {
-    // Construimos el árbol
+    // Construimos el Ã¡rbol
     NodoN* n5 = new NodoN(5);
     NodoN* n6 = new NodoN(6);
     NodoN* n2 = new NodoN(2);

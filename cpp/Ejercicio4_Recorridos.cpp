@@ -10,13 +10,19 @@ struct Nodo {
 };
 
 void inOrderAux(Nodo* nodo, vector<int>& resultado) {
-    if (nodo == nullptr) {
-        return;
-    }
+    // TODO: Implementa tu logica de recorrido aqui
 
-    inOrderAux(nodo->izquierdo, resultado);
-    resultado.push_back(nodo->valor);
-    inOrderAux(nodo->derecho, resultado);
+    // Caso base: si el nodo no existe, no hay nada que recorrer
+    if (nodo == nullptr) return;
+
+    // Primero recorremos todo el subárbol izquierdo (valores menores)
+    inOrderAux(nodo->izquierdo, resultado); // Recorre izquierda
+
+    // Luego visitamos el nodo actual y guardamos su valor
+    resultado.push_back(nodo->valor);       // Visita nodo
+
+    // Por último recorremos todo el subárbol derecho (valores mayores)
+    inOrderAux(nodo->derecho, resultado);   // Recorre derecha
 }
 
 vector<int> recorridoInOrder(Nodo* raiz) {

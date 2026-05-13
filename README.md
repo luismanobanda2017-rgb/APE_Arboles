@@ -28,3 +28,19 @@ El repositorio contiene 5 ejercicios, cada uno debe ser hecho en c++ y java
 3. No es necesario modificar el método `main`. Este método ya contiene la construcción de un árbol de prueba y las impresiones necesarias para validar que su algoritmo funciona correctamente.
 4. Su objetivo es lograr que, al ejecutar el código, los resultados calculados coincidan con los resultados esperados impresos en la consola.
 
+## Capturas de Resultados
+
+### Ejercicio 1 — Conteo de nodos en árbol N-ario
+![Ejercicio 1](capturas/ejercicio1.png)
+
+### Ejercicio 2 — Inserción en BST
+![Ejercicio 2](capturas/ejercicio2.png)
+
+### Ejercicio 3 — Cálculo de profundidad máxima
+![Ejercicio 3](capturas/ejercicio3.png)
+
+### Ejercicio 4 — Recorrido In-Order
+![Ejercicio 4](capturas/ejercicio4.png)
+
+### Ejercicio 5 — Inversión / Árbol espejo
+![Ejercicio 5](capturas/ejercicio5.png)

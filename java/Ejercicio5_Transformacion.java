@@ -1,13 +1,21 @@
 public class Ejercicio5_Transformacion {
     public static Nodo invertir(Nodo raiz) {
-        if (raiz == null) {
-            return null;
-        }
+        // TODO: Implementa tu lógica aquí
 
-        Nodo temporal = raiz.izquierdo;
-        raiz.izquierdo = invertir(raiz.derecho);
-        raiz.derecho = invertir(temporal);
+        // Caso base: si el nodo no existe, no hay nada que invertir
+        if (raiz == null) return null;
 
+        // Usamos una variable temporal para intercambiar los hijos
+        // izquierdo y derecho del nodo actual
+        Nodo temp = raiz.izquierdo;         // Guardamos el hijo izquierdo
+        raiz.izquierdo = raiz.derecho;      // Intercambiamos los hijos izquierdo y derecho
+        raiz.derecho = temp;
+
+        // Aplicamos la misma inversión de forma recursiva en ambos subárboles
+        invertir(raiz.izquierdo);           // Invertimos recursivamente ambos subárboles
+        invertir(raiz.derecho);
+
+        // Retornamos la raíz ya invertida
         return raiz;
     }
 

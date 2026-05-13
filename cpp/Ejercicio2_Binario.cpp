@@ -9,19 +9,19 @@ struct Nodo {
 };
 
 Nodo* insertar(Nodo* raiz, int valor) {
-    // TODO: Implementa tu lÛgica aquÌ
+    // TODO: Implementa tu l√≥gica aqu√≠
 
-    // Caso base: si llegamos a un espacio vacÌo, creamos el nuevo nodo aquÌ
+    // Caso base: si llegamos a un espacio vac√≠o, creamos el nuevo nodo aqu√≠
     if (raiz == nullptr) return new Nodo(valor);
 
-    // Si el valor es menor, pertenece al sub·rbol izquierdo
+    // Si el valor es menor, pertenece al sub√°rbol izquierdo
     if (valor < raiz->valor)
         raiz->izquierdo = insertar(raiz->izquierdo, valor);
     else
-        // Si el valor es mayor o igual, pertenece al sub·rbol derecho
+        // Si el valor es mayor o igual, pertenece al sub√°rbol derecho
         raiz->derecho = insertar(raiz->derecho, valor);
 
-    // Retornamos la raÌz con el nuevo nodo ya insertado
+    // Retornamos la ra√≠z con el nuevo nodo ya insertado
     return raiz;
 }
 

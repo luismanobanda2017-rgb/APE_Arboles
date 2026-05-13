@@ -1,9 +1,11 @@
 public class Ejercicio3_Binario2 {
     public static int calcularAltura(Nodo raiz) {
-        if (raiz == null) {
-            return 0;
-        }
+        // TODO: Implementa tu lógica aquí
 
+        // Caso base: un árbol vacío tiene altura 0
+        if (raiz == null) return 0;
+
+        // La altura es 1 (nodo actual) más la mayor altura entre los dos subárboles
         return 1 + Math.max(calcularAltura(raiz.izquierdo), calcularAltura(raiz.derecho));
     }
 
